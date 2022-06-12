@@ -25,16 +25,14 @@ def main():
   topo.construct_winslab_topology_with_channels(4, UsrpNode, GenericChannel)
 
   topo.start()
-  for i in range(500):
-    #from_id = random.randint(0, 3)
-    from_id = 1
-    #dest_id = random.randint(0, 3)
-    dest_id = 2
-    message = "hw!"
+  #for i in range(5):
+  from_id = 1
+  dest_id = 2
+  message = "hw!"
 
-    topo.nodes[from_id].appl.send_down(message, dest_id)
+  topo.nodes[from_id].appl.send_down(message, dest_id)
 
-    time.sleep(0.33)
+  #time.sleep(0.25)
 
 if __name__ == '__main__':
   main()
