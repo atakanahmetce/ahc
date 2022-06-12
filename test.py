@@ -34,7 +34,7 @@ def main():
 
     topo.nodes[from_id].appl.send_down(message, dest_id)
 
-    time.sleep(0.5)
+    time.sleep(0.33)
 
 if __name__ == '__main__':
   main()
