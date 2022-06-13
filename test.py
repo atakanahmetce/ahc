@@ -5,7 +5,8 @@ from node_model.GenericNode import UsrpNode
 def main():
   topo = Topology()
   topo.construct_winslab_topology_with_channels(4, UsrpNode, GenericChannel)
-
+  print(topo)
+  """
   topo.start()
   
   from_id = 1
@@ -13,6 +14,6 @@ def main():
   message = "hw!"
 
   topo.nodes[from_id].appl.send_down(message, dest_id)
-
+  """
 if __name__ == '__main__':
   main()
